@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(image/imagemenu.jpg);
+    background-size: cover;
+    background-position: center;
+    /* border: whitesmoke solid 1px; */
+}
+.navbar{
+    width: 90%;
+    /* border: rgba(245, 245, 245, 0.253) solid 1px; */
+    /* background-color: rgba(77, 74, 74, 0.322); */
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: rgba(255, 196, 0, 0.829);
+    box-shadow: 0 0 5px 2px yellow;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
+.logo{
+    width: 70px;
+    background-color: rgba(255, 196, 0, 0.685);
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255, 166, 0, 0.719);
+}
+.content{
+    /* border: rgba(64, 224, 208, 0.39) solid 1px; */
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    text-align: center;
+    color: white;
+}
+.content h1{
+    font-size: 48px;
+    margin-bottom:10px ;
+    filter: drop-shadow(-2px -2px 2px rgba(177, 122, 5, 0.651))
+           drop-shadow(-6px -6px 2px rgba(158, 111, 9, 0.651))
+             drop-shadow(2px 2px 2px rgba(177, 146, 8, 0.651))
+            drop-shadow(6px 6px 2px rgba(141, 105, 8, 0.651));
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    /* text-align: center; */
+    margin: 20px 10px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 208, 0, 0.685);
+    color: white;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    
+}
+button span{
+    content: '';
+    background-color: rgba(255, 230, 0, 0.61);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+    
